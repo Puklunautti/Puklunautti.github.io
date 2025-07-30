@@ -121,26 +121,26 @@ main{
     animation: fadein 1s;
     opacity: 1;
     background-size: cover;
-    background-image: url("E:/lataukset/PortfolioWeb25/Img/kuva_thumbnail.jpg");
+    background-image: url("Img/kuva_thumbnail.jpg");
 }
 
 .videot:hover{
     animation: fadein 1s;
     opacity: 1;
     background-size: cover;
-    background-image: url("E:/lataukset/PortfolioWeb25/Img/vid_thumbnail.png");
+    background-image: url("Img/vid_thumbnail.png");
 }
 .grafiikka:hover{
     animation: fadein 1s;
     opacity: 1;
     background-size: cover;
-    background-image: url("E:/lataukset/PortfolioWeb25/Img/grafiikka_thumbnail.png");
+    background-image: url("Img/grafiikka_thumbnail.png");
 }
 .muut:hover{
     animation: fadein 1s;
     opacity: 1;
     background-size: cover;
-    background-image: url("E:/lataukset/PortfolioWeb25/Img/uusi_prof_kuva-1.jpg");
+    background-image: url("Img/uusi_prof_kuva-1.jpg");
 }
 
 .thumbnail a{
