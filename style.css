@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Kaikkien sivujen css
+*/
+
+body{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 2fr auto;
+
+    width: 100vw;
+    
+    grid-template-areas: 
+    "navbar"
+    "main"
+    "footer";
+
+    align-items: center;
+    justify-items: center;
+
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-image: url("E:/lataukset/PortfolioWeb25/Img/iltataivas.png");
+    background-color: #aeb59f;
+}
+header{
+    grid-area: navbar;
+    
+    position: sticky;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #702824;
+    font-size: 6em;
+    font-weight: auto;
+    font-style: bold;
+
+    background-color: #aeb59f;
+}
+
+@keyframes titleShow {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+header a{
+    animation: 1s ease-out 0s 1 titleShow;
+    color: #702824;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+header a:hover{
+    color: black;
+}
+
+.info{
+    display: grid;
+    grid-gap: 3em;
+    text-align: center;
+    grid-template-columns:  10em 20em;
+    padding: 4em 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: rgba(174, 181, 159, 0.8);
+    align-items: center;
+}
+.info p{
+    font-size: 1.2em;
+}
+main{
+    grid-area: main;
+    align-items: center;
+    justify-items: center;
+    padding-top: 5em;
+    
+}
+.gallery{
+    padding-top: 4em;
+    padding-bottom: 3em;
+    display: grid;
+    grid-template-columns: 10em 10em;
+    grid-template-rows: 10em 10em;
+
+    column-gap: 1em;
+    row-gap: 1em;
+    
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    
+}
+.thumbnail{
+    background-color: rgba(174, 181, 159, 0.8);
+    width: 10em;
+    height: 10em;
+    align-content: center;
+    transition: all .2s ease-in-out;
+}
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.kuvat:hover{
+    animation: fadein 1s;
+    opacity: 1;
+    background-size: cover;
+    background-image: url("E:/lataukset/PortfolioWeb25/Img/kuva_thumbnail.jpg");
+}
+
+.videot:hover{
+    animation: fadein 1s;
+    opacity: 1;
+    background-size: cover;
+    background-image: url("E:/lataukset/PortfolioWeb25/Img/vid_thumbnail.png");
+}
+.grafiikka:hover{
+    animation: fadein 1s;
+    opacity: 1;
+    background-size: cover;
+    background-image: url("E:/lataukset/PortfolioWeb25/Img/grafiikka_thumbnail.png");
+}
+.muut:hover{
+    animation: fadein 1s;
+    opacity: 1;
+    background-size: cover;
+    background-image: url("E:/lataukset/PortfolioWeb25/Img/uusi_prof_kuva-1.jpg");
+}
+
+.thumbnail a{
+    color: white;
+    font-style: bold;
+    text-shadow: rgb(22, 19, 19) 4px 0 5px;
+    text-decoration: none;
+}
+
+footer{
+    margin-top: 10em; 
+    min-height: 100vh;
+    padding-top: 1em;
+    grid-area: footer;
+    font-size: 2em;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(174, 181, 159);
+    text-align: center;
+}
+
+
+/*
+Gallerian kuva/video css
+*/
+
+.aihe-esite{
+    color: #702824;
+
+    display: grid;
+
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+
+    column-gap: 0;
+
+    background-color: #aeb59f;
+
+}
+
+.video-esite{
+    color: #702824;
+
+    display: grid;
+
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+
+    column-gap: 0;
+
+    background-color: #aeb59f;
+
+    margin-bottom: 2em;
+}
+
+.kuva{
+    grid-area: kuva;
+    max-width: 30em;
+    max-height: 20em;
+
+    padding-left: 2em;
+}
+.teksti-esite{
+    padding: 1em 1em;
+}
+.teksti-esite p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.btn button{
+    padding: 1em 1em;
+
+    color: #702824;
+
+    background-color: #aeb59f;
+}
+.btn{
+    padding-bottom: 2em;
+}
+
+/*Grafiikat sivu*/
+
+.grafiikat{
+    display: grid;
+
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+
+    grid-gap: 2em;
+
+    margin-bottom: 3em;
+}
+
+.grafiikka_kuva{
+    width: 12em;
+    transition: all .2s ease-in-out;
+}
+.grafiikka_kuva:hover{
+    transform: scale(1.1)
+}
+.grafiikka-selite{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+
+    justify-content: center;
+    justify-items: center;
+
+    color: #702824;
+
+    background-color: #aeb59f;
+    padding: 2em 2em;
+    
+    margin-bottom: 2em;
+}
+.grafiikka-selite p{
+    color: black;
+
+}
+
+/*Meikä poika*/
+
+.about-me{
+    display: grid;
+    grid-gap: 5em;
+    text-align: center;
+    grid-template-columns:  20em 20em;
+    grid-template-rows: auto;
+    padding: 4em 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: rgba(174, 181, 159, 0.8);
+    align-items: center;
+
+    margin-bottom: 3em;
+    border-radius: 3%;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+
+}
+.prof-kuva{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
